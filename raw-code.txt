@@ -1,0 +1,12 @@
+<!-- FACEBOOK OPEN GRAPH TAGS -->
+  <?php osc_get_item_resources(); ?>
+  <meta property="og:title" content="<?php echo osc_esc_html(osc_item_title()); ?>" />
+  <?php if(osc_count_item_resources() > 0) { ?><meta property="og:image" content="<?php echo osc_resource_url(); ?>" /><?php } ?>
+  <meta property="og:site_name" content="<?php echo osc_esc_html(osc_page_title()); ?>"/>
+  <meta property="og:url" content="<?php echo osc_item_url(); ?>" />
+  <meta property="og:description" content="<?php echo osc_esc_html(osc_highlight(osc_item_description(), 500)); ?>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="<?php echo osc_current_user_locale(); ?>" />
+  <meta property="product:retailer_item_id" content="<?php echo osc_item_id(); ?>" /> 
+  <meta property="product:price:amount" content="<?php echo strip_tags(osc_item_formated_price()); ?>" />
+  <?php if(osc_item_price() <> '' and osc_item_price() <> 0) { ?><meta property="product:price:currency" content="<?php echo osc_item_currency(); ?>" /><?php } ?>
